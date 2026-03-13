@@ -215,14 +215,59 @@ textarea {
   border-bottom: 1px solid var(--line);
   background: rgba(250, 244, 236, 0.72);
   backdrop-filter: blur(18px);
+  box-shadow: 0 0 0 rgba(96, 76, 51, 0);
+  transition:
+    background 0.32s ease,
+    border-color 0.32s ease,
+    box-shadow 0.32s ease,
+    transform 0.32s ease;
+}
+
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 141, 98, 0.46),
+    transparent
+  );
+  opacity: 0;
+  transform: scaleX(0.8);
+  transition:
+    opacity 0.32s ease,
+    transform 0.32s ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: rgba(59, 46, 34, 0.16);
+  background: rgba(250, 244, 236, 0.92);
+  box-shadow: 0 16px 34px rgba(96, 76, 51, 0.1);
+}
+
+.site-header.is-scrolled::after {
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .page-home .site-header {
-  position: absolute;
+  position: fixed;
+  left: 0;
+  right: 0;
   width: 100%;
   border-bottom: 0;
   background: linear-gradient(180deg, rgba(31, 24, 19, 0.34), transparent);
   backdrop-filter: none;
+}
+
+.page-home .site-header.is-scrolled {
+  background: rgba(248, 241, 231, 0.84);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 34px rgba(40, 29, 20, 0.12);
 }
 
 .page-home .brand,
@@ -237,15 +282,16 @@ textarea {
   border-bottom-color: rgba(255, 255, 255, 0.7);
 }
 
-.page-home .nav-cta {
-  border-color: rgba(255, 255, 255, 0.36);
-  background: rgba(255, 255, 255, 0.08);
+.page-home .site-header.is-scrolled .brand,
+.page-home .site-header.is-scrolled .nav a {
+  color: var(--text);
+  text-shadow: none;
 }
 
-.page-home .nav-cta:hover,
-.page-home .nav-cta.is-active {
-  border-color: rgba(255, 255, 255, 0.58);
-  background: rgba(255, 255, 255, 0.16);
+.page-home .site-header.is-scrolled .nav a:hover,
+.page-home .site-header.is-scrolled .nav a.is-active {
+  color: var(--text);
+  border-bottom-color: var(--line-strong);
 }
 
 .header-inner {
@@ -255,6 +301,14 @@ textarea {
   justify-content: space-between;
   gap: 24px;
   padding: 14px 0;
+  transition:
+    min-height 0.32s ease,
+    padding 0.32s ease;
+}
+
+.site-header.is-scrolled .header-inner {
+  min-height: 76px;
+  padding: 10px 0;
 }
 
 .brand {
@@ -267,9 +321,11 @@ textarea {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: flex-end;
-  gap: 18px;
+  gap: clamp(10px, 1.4vw, 18px);
+  margin-left: auto;
 }
 
 .nav a {
@@ -279,6 +335,7 @@ textarea {
   text-transform: uppercase;
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
+  white-space: nowrap;
   transition:
     color 0.24s ease,
     border-color 0.24s ease,
@@ -293,19 +350,6 @@ textarea {
 
 .nav a:hover {
   transform: translateY(-1px);
-}
-
-.nav-cta {
-  padding: 10px 16px;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.34);
-}
-
-.nav-cta:hover,
-.nav-cta.is-active {
-  border-color: rgba(181, 141, 98, 0.34);
-  background: rgba(181, 141, 98, 0.14);
 }
 
 .hero,
@@ -1364,6 +1408,7 @@ textarea:active {
   }
 
   .header-inner {
+    flex-direction: column;
     align-items: flex-start;
     min-height: auto;
   }
@@ -1378,8 +1423,17 @@ textarea:active {
   }
 
   .nav {
+    width: 100%;
     justify-content: flex-start;
     gap: 12px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
   }
 
   .page-home .nav {

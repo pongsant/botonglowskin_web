@@ -6,6 +6,27 @@ document.querySelectorAll("[data-year]").forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
 
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+  const syncHeaderState = () => {
+    siteHeader.classList.toggle("is-scrolled", window.scrollY > 20);
+  };
+
+  syncHeaderState();
+
+  let headerFrameId = 0;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      cancelAnimationFrame(headerFrameId);
+      headerFrameId = requestAnimationFrame(syncHeaderState);
+    },
+    { passive: true },
+  );
+}
+
 if (!prefersReducedMotion.matches) {
   const root = document.documentElement;
   let frameId = 0;
