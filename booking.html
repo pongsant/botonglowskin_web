@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOTANGLOWSKIN | Booking</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+        <nav class="nav">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a class="nav-cta" href="booking.html">Book</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="section">
+      <div class="container narrow content-page">
+        <p class="eyebrow">Booking</p>
+        <h1>Request Appointment</h1>
+        <p>
+          Fill out this form and we will confirm your appointment by email or phone.
+        </p>
+
+        <form class="form" id="booking-form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" />
+
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Select</option>
+            <option>BOTAN SCULPT FACIAL (75 MIN)</option>
+            <option>RESET DETOX FACIAL (60 MIN)</option>
+            <option>EYES + JAWLINE LIFT (45 MIN)</option>
+          </select>
+
+          <label for="date">Preferred date</label>
+          <input id="date" name="date" type="date" required />
+
+          <label for="time">Preferred time</label>
+          <input id="time" name="time" type="time" required />
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Skin concerns or allergies"></textarea>
+
+          <button type="submit" class="btn-primary">Send Request</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> BOTANGLOWSKIN</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById("booking-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Thank you. Your request has been received.");
+      });
+    </script>
+  </body>
+</html>
