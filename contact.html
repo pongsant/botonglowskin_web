@@ -1,52 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact BOTANGLOWSKIN for studio inquiries, booking questions, and treatment information."
+    />
     <title>BOTANGLOWSKIN | Contact</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body>
+  <body class="page page-contact">
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">BOTANGLOWSKIN</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
+          <a class="is-active" href="contact.html">Contact</a>
           <a class="nav-cta" href="booking.html">Book</a>
         </nav>
       </div>
     </header>
 
-    <main class="section contact-section">
-      <div class="container contact-layout">
-        <div class="content-page contact-info">
-          <p class="eyebrow">Contact</p>
-          <h1>Visit + Inquiries</h1>
-          <p>City, State (update later)</p>
-          <p>
-            Email: <a href="mailto:botonglow,skin@gmail.com">botonglow,skin@gmail.com</a><br />
-            Phone: <a href="tel:0000000000">000-000-0000</a>
-          </p>
-          <p>
-            Cancellation policy: Please provide at least 24 hours notice to cancel or reschedule.
-          </p>
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="page-hero-copy" data-reveal>
+            <p class="eyebrow">Contact</p>
+            <h1>Visit, inquire, or ask about the right treatment fit.</h1>
+            <p class="page-intro">
+              Use the booking page for appointment requests, or reach out here
+              for studio questions, service details, and general inquiries.
+            </p>
+          </div>
+
+          <div class="panel page-hero-card" data-reveal>
+            <p class="small-label">Response style</p>
+            <p>
+              The studio keeps communication personal and intentional, with
+              booking details confirmed directly after review.
+            </p>
+          </div>
         </div>
-        <div class="contact-photo-wrap">
-          <img class="contact-main-photo" src="photo/main.JPG" alt="BOTANGLOWSKIN facial image" />
+      </section>
+
+      <section class="section">
+        <div class="container contact-layout">
+          <div class="image-panel tall-panel" data-reveal>
+            <img
+              src="photo/main.JPG"
+              alt="Botanglowskin calming facial image"
+            />
+          </div>
+
+          <div class="contact-stack">
+            <article class="contact-card" data-reveal>
+              <p class="small-label">Studio location</p>
+              <p class="contact-value">
+                Private studio details shared on confirmation.
+              </p>
+              <p>
+                Once an appointment is approved, the final visit details can be
+                shared directly with the client.
+              </p>
+            </article>
+
+            <article class="contact-card" data-reveal>
+              <p class="small-label">Studio email</p>
+              <p class="contact-value">botonglow,skin@gmail.com</p>
+              <p>
+                Use email for service questions, availability details, and
+                general inquiries.
+              </p>
+            </article>
+
+            <article class="contact-card" data-reveal>
+              <p class="small-label">Booking support</p>
+              <p class="contact-value">
+                Start with the appointment request form.
+              </p>
+              <p>
+                New treatment requests can be submitted through the booking page
+                first.
+              </p>
+            </article>
+
+            <article class="contact-card" data-reveal>
+              <p class="small-label">Cancellation policy</p>
+              <p>
+                Please provide at least 24 hours notice to cancel or reschedule.
+              </p>
+            </article>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> BOTANGLOWSKIN</p>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+          <p>
+            Reach out for booking questions, treatment guidance, and studio
+            details.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="services.html">Treatments</a>
+          <a href="booking.html">Book</a>
+          <a href="virtual-call.html">Virtual Call</a>
+        </div>
+
+        <div class="footer-meta">
+          <p>Studio details can be shared once availability is confirmed.</p>
+          <p class="footer-copy">© <span data-year></span> BOTANGLOWSKIN</p>
+        </div>
       </div>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

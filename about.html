@@ -1,48 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn the treatment philosophy behind BOTANGLOWSKIN, a calm face spa studio focused on sculpting, lymphatic flow, and skin recovery."
+    />
     <title>BOTANGLOWSKIN | About</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body>
+  <body class="page page-about">
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">BOTANGLOWSKIN</a>
-        <nav class="nav">
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a class="is-active" href="about.html">About</a>
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
           <a href="contact.html">Contact</a>
           <a class="nav-cta" href="booking.html">Book</a>
         </nav>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container narrow content-page">
-        <p class="eyebrow">About</p>
-        <h1>Our Approach</h1>
-        <p>
-          BOTANGLOWSKIN is a face spa brand focused on lifting massage, lymphatic flow,
-          and skin recovery. Every appointment is designed to leave your skin calm,
-          bright, and naturally contoured.
-        </p>
-        <p>
-          We combine intentional touch with gentle skincare techniques to support long-term
-          skin health and visible glow.
-        </p>
-      </div>
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="page-hero-copy" data-reveal>
+            <p class="eyebrow">About the Studio</p>
+            <h1>A calm, contour-led approach to face treatment.</h1>
+            <p class="page-intro">
+              BOTANGLOWSKIN is built around lifting massage, lymphatic flow, and
+              recovery- focused skin care. Every appointment is designed to
+              leave skin calmer, brighter, and naturally refined.
+            </p>
+          </div>
+
+          <div class="panel page-hero-card" data-reveal>
+            <p class="small-label">Brand feeling</p>
+            <p>
+              Less clinical, more ritual. Less brightness, more depth. The
+              experience is meant to feel grounded from the first touch to the
+              final finish.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-layout">
+          <div class="panel panel-spacious" data-reveal>
+            <p class="eyebrow">Why It Works</p>
+            <h2>Skin care that respects pace, pressure, and recovery.</h2>
+            <p>
+              The studio philosophy is not about chasing a harsh result. It is
+              about using intentional touch to soften tension, encourage flow,
+              and support longer-term skin health in a way that still feels
+              luxurious.
+            </p>
+            <p>
+              That means fewer rushed steps, more facial massage, and a finish
+              that looks polished without feeling overdone.
+            </p>
+          </div>
+
+          <div class="image-panel" data-reveal>
+            <img src="photo/2.JPG" alt="Softly lit face treatment setting" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Core Principles</p>
+            <h2>The treatment language of the studio.</h2>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature-card" data-reveal>
+              <p class="card-index">01</p>
+              <h3>Intentional Touch</h3>
+              <p>
+                Massage techniques are used with purpose so the skin experience
+                feels soothing while the facial structure looks cleaner and more
+                awake.
+              </p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <p class="card-index">02</p>
+              <h3>Visible Calm</h3>
+              <p>
+                The goal is not only glow, but skin that appears settled, less
+                puffy, and more balanced after the treatment ends.
+              </p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <p class="card-index">03</p>
+              <h3>Longer-Term Support</h3>
+              <p>
+                Services and consultations are designed to support real
+                routines, not just one-day results, so skin care can continue
+                beyond the studio.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container detail-grid">
+          <div class="quote-panel" data-reveal>
+            <p class="quote-text">
+              The goal is skin that looks lifted, rested, and still completely
+              like you.
+            </p>
+            <p class="small-label">BOTANGLOWSKIN Philosophy</p>
+          </div>
+
+          <div class="panel panel-spacious" data-reveal>
+            <p class="eyebrow">Next Step</p>
+            <h2>Choose a ritual that matches your current skin mood.</h2>
+            <p>
+              Whether you need full sculpting, a detox reset, or focused work
+              around the eyes and jawline, the treatments are structured to meet
+              the skin where it is.
+            </p>
+            <a class="text-link" href="services.html">View treatments</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> BOTANGLOWSKIN</p>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+          <p>
+            Sculpting, lymphatic flow, and recovery-focused facial care in a
+            quiet, moody setting.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
+          <a href="booking.html">Book</a>
+        </div>
+
+        <div class="footer-meta">
+          <p>Personalized plans are also available online.</p>
+          <p class="footer-copy">© <span data-year></span> BOTANGLOWSKIN</p>
+        </div>
       </div>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

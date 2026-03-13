@@ -1,48 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Book a BOTANGLOWSKIN virtual skin consultation to discuss your goals, current routine, and a personalized plan you can follow at home."
+    />
     <title>BOTANGLOWSKIN | Virtual Call</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body class="editorial-page">
-    <header class="site-header editorial-header">
+  <body class="page page-virtual">
+    <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">BOTANGLOWSKIN</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
+          <a href="about.html">About</a>
           <a href="services.html">Treatments</a>
-          <a class="is-active" href="virtual-call.html">Virtual Consultations</a>
+          <a class="is-active" href="virtual-call.html">Virtual Call</a>
           <a href="contact.html">Contact</a>
-          <a class="nav-cta" href="booking.html">Book Now</a>
+          <a class="nav-cta" href="booking.html">Book</a>
         </nav>
       </div>
     </header>
 
-    <main class="section editorial-main">
-      <div class="container editorial-layout">
-        <section class="editorial-left">
-          <h1>No matter where you are, radiant skin is always within reach.</h1>
-          <a class="editorial-line-link" href="booking.html">Book Your Virtual Call</a>
-        </section>
-
-        <section class="editorial-center">
-          <img class="editorial-top-image" src="photo/2.JPG" alt="Virtual consultation visual" />
-          <article class="editorial-copy">
-            <p>
-              Book your virtual call to discuss your skin goals, current routine,
-              and a personalized plan you can follow at home.
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="page-hero-copy" data-reveal>
+            <p class="eyebrow">Virtual Consultation</p>
+            <h1>Personalized skin guidance, wherever you are.</h1>
+            <p class="page-intro">
+              Book a virtual call to discuss your skin goals, current routine,
+              and the kind of support that makes sense for your day-to-day life.
             </p>
-            <p><strong>$80 - 45 minutes</strong></p>
-            <p>Format: Video Call</p>
-          </article>
-        </section>
+          </div>
 
-        <section class="editorial-right">
-          <img class="editorial-tall-image" src="photo/main.JPG" alt="Virtual call visual" />
-        </section>
-      </div>
+          <div class="price-panel" data-reveal>
+            <p class="price-value">Video Call</p>
+            <p class="price-amount">$80</p>
+            <p>45 minutes of focused, one-to-one skin direction.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">How It Flows</p>
+            <h2>The consultation is simple, personal, and practical.</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step" data-reveal>
+              <p class="step-number">Step 01</p>
+              <h3>Talk Through Your Goals</h3>
+              <p>
+                We start with what you are noticing now, what you want to
+                improve, and how your skin has been feeling lately.
+              </p>
+            </article>
+
+            <article class="process-step" data-reveal>
+              <p class="step-number">Step 02</p>
+              <h3>Review Your Routine</h3>
+              <p>
+                Current habits, product use, and skin stressors are looked at
+                together so the plan can stay realistic and useful.
+              </p>
+            </article>
+
+            <article class="process-step" data-reveal>
+              <p class="step-number">Step 03</p>
+              <h3>Leave With a Clear Plan</h3>
+              <p>
+                You finish the call with personalized direction you can follow
+                at home and use to support future treatments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-layout">
+          <div class="image-panel tall-panel" data-reveal>
+            <img
+              src="photo/main.JPG"
+              alt="Botanglowskin consultation mood image"
+            />
+          </div>
+
+          <div class="panel panel-spacious" data-reveal>
+            <p class="eyebrow">What You Leave With</p>
+            <h2>A personalized path, not generic advice.</h2>
+            <p>
+              The virtual consultation is ideal if you need help understanding
+              your skin priorities, adjusting your current routine, or deciding
+              which treatment is the best next step.
+            </p>
+
+            <div class="detail-grid">
+              <div>
+                <p class="small-label">Includes</p>
+                <p>Routine review and skin-goal discussion.</p>
+              </div>
+              <div>
+                <p class="small-label">Format</p>
+                <p>Online video call from wherever you are.</p>
+              </div>
+            </div>
+
+            <a class="text-link" href="booking.html"
+              >Request your consultation</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+          <p>
+            One-to-one virtual skin support for treatment planning and home
+            routine clarity.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="services.html">Treatments</a>
+          <a href="booking.html">Book</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-meta">
+          <p>45 minutes. Personalized plan. Remote-friendly.</p>
+          <p class="footer-copy">© <span data-year></span> BOTANGLOWSKIN</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

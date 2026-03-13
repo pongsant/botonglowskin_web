@@ -1,76 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Request an appointment with BOTANGLOWSKIN for sculpting facials, detox treatments, focused contour work, or a virtual skin consultation."
+    />
     <title>BOTANGLOWSKIN | Booking</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body>
+  <body class="page page-booking">
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">BOTANGLOWSKIN</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
           <a href="contact.html">Contact</a>
-          <a class="nav-cta" href="booking.html">Book</a>
+          <a class="nav-cta is-active" href="booking.html">Book</a>
         </nav>
       </div>
     </header>
 
-    <main class="section">
-      <div class="container narrow content-page">
-        <p class="eyebrow">Booking</p>
-        <h1>Request Appointment</h1>
-        <p>
-          Fill out this form and we will confirm your appointment by email or phone.
-        </p>
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-grid">
+          <div class="page-hero-copy" data-reveal>
+            <p class="eyebrow">Booking</p>
+            <h1>Request your appointment in a few calm steps.</h1>
+            <p class="page-intro">
+              Share your preferred treatment, date, and time. The studio will
+              confirm the appointment by email or phone after reviewing
+              availability.
+            </p>
+          </div>
 
-        <form class="form" id="booking-form">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" required />
+          <div class="panel page-hero-card" data-reveal>
+            <p class="small-label">Booking note</p>
+            <p>
+              Requests are reviewed personally so the timing, treatment length,
+              and skin focus can be matched with care.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required />
+      <section class="section">
+        <div class="container booking-layout">
+          <div class="panel panel-spacious" data-reveal>
+            <p class="eyebrow">Appointment Request</p>
+            <h2>Tell us what you need.</h2>
 
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone" type="tel" />
+            <form class="form" id="booking-form">
+              <div class="form-grid">
+                <div class="field-group">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" required />
+                </div>
 
-          <label for="service">Service</label>
-          <select id="service" name="service" required>
-            <option value="">Select</option>
-            <option>BOTAN SCULPT FACIAL (75 MIN)</option>
-            <option>RESET DETOX FACIAL (60 MIN)</option>
-            <option>EYES + JAWLINE LIFT (45 MIN)</option>
-          </select>
+                <div class="field-group">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" required />
+                </div>
 
-          <label for="date">Preferred date</label>
-          <input id="date" name="date" type="date" required />
+                <div class="field-group">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" />
+                </div>
 
-          <label for="time">Preferred time</label>
-          <input id="time" name="time" type="time" required />
+                <div class="field-group">
+                  <label for="service">Service</label>
+                  <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option>BOTAN SCULPT FACIAL (75 MIN)</option>
+                    <option>RESET DETOX FACIAL (60 MIN)</option>
+                    <option>EYES + JAWLINE LIFT (45 MIN)</option>
+                    <option>VIRTUAL SKIN CONSULTATION (45 MIN)</option>
+                  </select>
+                </div>
 
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" rows="4" placeholder="Skin concerns or allergies"></textarea>
+                <div class="field-group">
+                  <label for="date">Preferred date</label>
+                  <input id="date" name="date" type="date" required />
+                </div>
 
-          <button type="submit" class="btn-primary">Send Request</button>
-        </form>
-      </div>
+                <div class="field-group">
+                  <label for="time">Preferred time</label>
+                  <input id="time" name="time" type="time" required />
+                </div>
+
+                <div class="field-group full-width">
+                  <label for="notes">Notes</label>
+                  <textarea
+                    id="notes"
+                    name="notes"
+                    rows="5"
+                    placeholder="Skin concerns, treatment goals, allergies, or anything helpful before your visit"
+                  ></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="button button-primary">
+                Send Request
+              </button>
+              <p
+                class="form-status"
+                id="form-status"
+                aria-live="polite"
+                hidden
+              ></p>
+            </form>
+          </div>
+
+          <aside class="booking-aside">
+            <div class="contact-card" data-reveal>
+              <p class="small-label">What to expect</p>
+              <p>
+                Once your form is sent, the studio will follow up to confirm
+                availability and any details needed before your appointment.
+              </p>
+            </div>
+
+            <div class="contact-card" data-reveal>
+              <p class="small-label">Treatment menu</p>
+              <p>
+                Choose between the full sculpt facial, reset detox treatment,
+                targeted eye and jawline work, or a virtual consultation.
+              </p>
+            </div>
+
+            <div class="contact-card" data-reveal>
+              <p class="small-label">Cancellation policy</p>
+              <p>
+                Please provide at least 24 hours notice to cancel or reschedule.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> BOTANGLOWSKIN</p>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+          <p>
+            Appointment requests for sculpting facials, detox rituals, contour
+            work, and virtual consultations.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-meta">
+          <p>24-hour notice is requested for schedule changes.</p>
+          <p class="footer-copy">© <span data-year></span> BOTANGLOWSKIN</p>
+        </div>
       </div>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-      document.getElementById("booking-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Thank you. Your request has been received.");
-      });
-    </script>
   </body>
 </html>

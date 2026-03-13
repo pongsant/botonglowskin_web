@@ -1,43 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BOTANGLOWSKIN is a calm, sculpting-focused face spa studio offering moody facial rituals, lymphatic massage, and glow-led skin treatments."
+    />
     <title>BOTANGLOWSKIN | Home</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
   </head>
-  <body class="home-page">
-    <header class="site-header home-header">
+  <body class="page page-home">
+    <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">BOTANGLOWSKIN</a>
-        <nav class="nav">
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="is-active" href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="services.html">Services</a>
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
           <a href="contact.html">Contact</a>
           <a class="nav-cta" href="booking.html">Book</a>
         </nav>
       </div>
     </header>
 
-    <main class="home-main">
-      <section class="home-hero">
-        <img class="main-photo" src="photo/2.JPG" alt="BOTANGLOWSKIN main photo" />
-        <div class="home-overlay">
-          <div class="container">
-            <div class="home-copy">
-              <p class="eyebrow">Face Spa Studio</p>
-              <h1>BOTANGLOWSKIN</h1>
-              <p class="lead">
-                Sculpting and glow-focused face spa treatments in a calm, minimalist space.
-              </p>
-              <p class="links-inline">
-                <a href="booking.html">Book now</a>
-                <a href="services.html">View services</a>
+    <main>
+      <section class="hero hero-home">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Face Spa Studio</p>
+            <h1>Moody facial rituals shaped for lift, calm, and glow.</h1>
+            <p class="hero-lead">
+              BOTANGLOWSKIN blends sculpting massage, lymphatic flow, and skin
+              recovery into treatments that feel quiet, grounded, and visibly
+              refined.
+            </p>
+
+            <div class="button-row">
+              <a class="button button-primary" href="booking.html"
+                >Book a Treatment</a
+              >
+              <a class="button button-secondary" href="services.html"
+                >Explore Rituals</a
+              >
+            </div>
+
+            <div class="hero-meta">
+              <div>
+                <p class="small-label">Signature focus</p>
+                <p>
+                  Face sculpting, depuffing, circulation, and a soft recovery
+                  glow.
+                </p>
+              </div>
+              <div>
+                <p class="small-label">Designed for</p>
+                <p>
+                  Stressed, dull, contour-seeking skin that needs visible calm.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="art-stack" data-reveal>
+            <div class="art-card art-card-small">
+              <img
+                src="photo/main.JPG"
+                alt="Close-up facial treatment detail"
+              />
+            </div>
+            <div class="art-card art-card-large">
+              <img src="photo/2.JPG" alt="Botanglowskin treatment atmosphere" />
+            </div>
+            <div class="panel art-note">
+              <p class="small-label">Studio mood</p>
+              <p>
+                Soft light, intentional touch, and treatments paced like a
+                full-body exhale.
               </p>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Treatment Philosophy</p>
+            <h2>Every appointment is built like a reset, not a rush.</h2>
+            <p>
+              The studio approach is calm on purpose: less overstimulation, more
+              meaningful touch, and a finish that leaves skin looking lifted
+              instead of overworked.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="feature-card" data-reveal>
+              <p class="card-index">01</p>
+              <h3>Lymphatic Release</h3>
+              <p>
+                Gentle drainage-inspired massage helps reduce heaviness, soften
+                puffiness, and bring back a lighter facial shape.
+              </p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <p class="card-index">02</p>
+              <h3>Sculpted Contour</h3>
+              <p>
+                Focused facial work supports definition through the cheeks,
+                jawline, and eye area with a naturally refined finish.
+              </p>
+            </article>
+
+            <article class="feature-card" data-reveal>
+              <p class="card-index">03</p>
+              <h3>Recovery Glow</h3>
+              <p>
+                The last layer of every ritual is skin comfort: easing tension,
+                supporting balance, and leaving a polished healthy sheen.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split-layout">
+          <div class="image-panel tall-panel" data-reveal>
+            <img
+              src="photo/main.JPG"
+              alt="Client receiving a calming face treatment"
+            />
+          </div>
+
+          <div class="panel panel-spacious" data-reveal>
+            <p class="eyebrow">Our Approach</p>
+            <h2>Editorial in mood, but grounded in real skin care.</h2>
+            <p>
+              BOTANGLOWSKIN pairs visible sculpting techniques with a slower
+              treatment rhythm so the entire appointment feels restorative while
+              the results stay clean, lifted, and believable.
+            </p>
+
+            <div class="stat-row">
+              <div>
+                <span class="stat-value">75</span>
+                <span class="stat-label"
+                  >minutes for the signature sculpt facial</span
+                >
+              </div>
+              <div>
+                <span class="stat-value">45</span>
+                <span class="stat-label"
+                  >minutes for focused eye and jaw work</span
+                >
+              </div>
+              <div>
+                <span class="stat-value">1:1</span>
+                <span class="stat-label"
+                  >personal guidance through virtual skin calls</span
+                >
+              </div>
+            </div>
+
+            <a class="text-link" href="about.html"
+              >Read the studio philosophy</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Signature Treatments</p>
+            <h2>Three rituals for contour, detox, and skin recovery.</h2>
+          </div>
+
+          <div class="service-cards">
+            <article class="service-card" data-reveal>
+              <span class="service-time">75 Minutes</span>
+              <h3>Botan Sculpt Facial</h3>
+              <p>
+                Deep sculpting massage, lymphatic work, and a glow-finishing
+                mask for skin that looks refreshed and more defined.
+              </p>
+              <p class="service-meta">
+                Lifted contours • depuffing • signature ritual
+              </p>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="service-time">60 Minutes</span>
+              <h3>Reset Detox Facial</h3>
+              <p>
+                A reset treatment for stressed and dull skin, focused on
+                decongesting, calming, and bringing back a rested surface.
+              </p>
+              <p class="service-meta">
+                Skin reset • softness • post-stress balance
+              </p>
+            </article>
+
+            <article class="service-card" data-reveal>
+              <span class="service-time">45 Minutes</span>
+              <h3>Eyes + Jawline Lift</h3>
+              <p>
+                Targeted contour support through the eye area, cheeks, and
+                jawline when you want a shorter but more precise lifting
+                session.
+              </p>
+              <p class="service-meta">
+                Focused contour • quick glow • tension release
+              </p>
+            </article>
+          </div>
+
+          <div class="panel subtle-panel section-cta" data-reveal>
+            <p class="small-label">Beyond the treatment room</p>
+            <p>
+              Need ongoing support? The virtual consultation turns your goals,
+              current routine, and skin concerns into a personalized plan you
+              can follow at home.
+            </p>
+            <a class="text-link" href="virtual-call.html"
+              >See the virtual consultation</a
+            >
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">BOTANGLOWSKIN</a>
+          <p>
+            Face sculpting, lymphatic rituals, and glow-focused care in a calm
+            studio setting.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="services.html">Treatments</a>
+          <a href="virtual-call.html">Virtual Call</a>
+        </div>
+
+        <div class="footer-meta">
+          <p>Booking requests are confirmed manually.</p>
+          <p class="footer-copy">© <span data-year></span> BOTANGLOWSKIN</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
